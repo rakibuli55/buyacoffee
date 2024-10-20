@@ -58,7 +58,7 @@ function SupporterFunctionalitySection() {
           </div>
           <div className="w-fit mx-auto mt-[60px] mb-[68px]">
             <div data-aos="fade-up">
-              <Link to={"/"}>
+              <Link to={"/createaccount"}>
                 <ButtonPrimary text="Start my page — It’s free" />
               </Link>
             </div>

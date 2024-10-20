@@ -1,9 +1,17 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 import SocialIcon from "../components/common/SocialIcon";
 
 function Footer() {
+  const location = useLocation();
+  if (
+    location.pathname === "/login" ||
+    location.pathname === "/signup" ||
+    location.pathname === "/createaccount" ||
+    location.pathname === "/signupsteps"
+  ) {
+    return null;
+  }
   return (
     <footer className="bg-fotterBg text-white py-[60px]">
       <div className="container">

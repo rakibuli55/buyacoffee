@@ -17,6 +17,7 @@ export default {
         'heroColor':'#afafa',
         'primaryLight':"#E4FFCA",
         'fotterBg' :'#081409',
+        'authInput':'#F3F3F3',
       },
       fontFamily:{
         'jakarta':"'Plus Jakarta Sans', serif"

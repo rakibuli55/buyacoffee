@@ -5,6 +5,9 @@ import LoginPage from "../Pages/LoginPage";
 import SignUpPage from "../Pages/SignUpPage";
 import CreateAccount from "../Pages/CreateAccount";
 import StepsSignupPage from "../Pages/StepsSignupPage";
+import DashbaordLayout from "../layout/DashbaordLayout";
+import HompePage from "../Pages/dashboardPages/HomePage/HompePage";
+import MyPage from "../Pages/dashboardPages/MyPage/MyPage";
 
 
 const router = createBrowserRouter([
@@ -34,6 +37,20 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path: '/dashboard',
+        element: <DashbaordLayout></DashbaordLayout>,
+        children: [
+            {
+                path: '/dashboard/home',
+                element: <HompePage></HompePage>
+            },
+            {
+                path: '/dashboard/my-page',
+                element: <MyPage></MyPage>
+            }
+        ]
+    }
 
 
     

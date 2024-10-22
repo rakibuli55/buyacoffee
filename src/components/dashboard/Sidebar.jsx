@@ -8,23 +8,24 @@ import CommonLink from "./CommonLink";
 import { useContext } from "react";
 import { MainContext } from "@/context";
 import Logo from '../../assets/images/logo.svg'
+import { Link } from "react-router-dom";
+
 
 function Sidebar() {
 
 
 const {role} = useContext(MainContext)
 
-
   return (
     <div className="w-full p-6">
       {/* logo */}
-      <div>
+      <Link to={'/dashboard'}>
        <img src={Logo} alt="sidebar logo" />
-      </div>
+      </Link>
       <div className="pt-6">
         {/* home */}
         <div className="flex items-center flex-col gap-2 w-full ">
-          <CommonLink path={'/dashboard/home'} navName={'Home'} Icon={RiHome4Line}></CommonLink>
+          <CommonLink path={'/dashboard'} navName={'Home'} Icon={RiHome4Line}></CommonLink>
           <CommonLink path={'/dashboard/my-page'} navName={'View my page'} Icon={PiLayoutThin}></CommonLink>
         </div>
         {/* community */}

@@ -1,3 +1,13 @@
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { MdOutlineCloudDownload } from "react-icons/md";
+
 function ProfileSection() {
   return (
     <div className=" mt-6 ">
@@ -71,9 +81,33 @@ function ProfileSection() {
                   </svg>
                 </div>
                 <div>
-                  <button className="px-12 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm">
-                    Edit Profile
-                  </button>
+                  <Dialog>
+                    <DialogTrigger className="w-full">
+                      <button className="px-12 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm">
+                        Edit Profile
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle className="p-0 border-b pb-4">
+                          <div className="relative">
+                            <h3 className="text-2xl font-semibold text-textDark text-center ">
+                              Edit Profile
+                            </h3>
+                          </div>
+                        </DialogTitle>
+                        <DialogDescription>
+                          <div className="py-4">
+                            <div className="flex justify-end pt-4">
+                              <button className="text-sm px-6 py-3 rounded-full bg-primaryColor text-textDark font-semibold ">
+                                Save Changes
+                              </button>
+                            </div>
+                          </div>
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>

@@ -106,7 +106,7 @@
     transform: translateY(-50%);
     width: 18px;
     height: 18px;
-    border: 1px solid #0A3201;
+    border: 1px solid #0a3201;
     border-radius: 100%;
     background: #fff;
   }
@@ -115,7 +115,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    background: #0A3201;
+    background: #0a3201;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) !important;
@@ -133,6 +133,12 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+  .donation-box-wrap {
+    @apply w-[33.33%] flex-[1_0_33.33%] px-3;
+  }
+  .sub-heading {
+    @apply text-[24px] font-bold text-headingColor
   }
 }
 

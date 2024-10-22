@@ -10,7 +10,7 @@ function MyPage() {
   return (
     <div className="">
       {/* Home Paget Top */}
-      <div className="">
+      <div className="border-b pb-6">
         <Top title={"Profile"}></Top>
       </div>
       <ProfileSection></ProfileSection>

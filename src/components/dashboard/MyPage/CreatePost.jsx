@@ -25,9 +25,9 @@ function CreatePost() {
             />
           </div>
           <Dialog>
-            <DialogTrigger>
+            <DialogTrigger className="w-full">
               <div className="w-full">
-                <h4 className="text-[#717171] px-4 py-3 rounded-full bg-gray-50 w-full font-medium">
+                <h4 className="text-[#717171] text-left  px-4 py-3 rounded-full bg-gray-50 w-full font-medium">
                   What’s in your mind?
                 </h4>
               </div>
@@ -50,21 +50,25 @@ function CreatePost() {
                     </div>
                     <div className="pt-4">
                         <div>
-                            <textarea className="px-4 border focus:outline-none placeholder:text-textDark py-3 rounded-xl text-textColor w-full h-[200px]" name="" placeholder="Write Bio" id=""></textarea>
+                            <textarea className="px-4 resize-none border focus:outline-none placeholder:text-textDark py-3 rounded-xl text-textColor w-full h-[200px]" name="" placeholder="Write Bio" id=""></textarea>
                         </div>
                     </div>
 
                     <div className="pt-4 w-full">
                         <input className="hidden" type="file" accept="*/" name="getFeatured" id="getFeatured" />
-                        <label className="border p-4 flex  justify-center items-center rounded-md  bg-backgroundLight border-borderColor w-full h-[200px]" htmlFor="getFeatured">
+                        <label className="border cursor-pointer p-4 flex  justify-center items-center rounded-md  bg-backgroundLight w-full h-[200px]" htmlFor="getFeatured">
 
-                            <div className="w-full flex flex-col justify-center items-center">
-                            <MdOutlineCloudDownload size={30} />
-                            <h4>Drop file here or click to upload</h4>
-                            <h4>Browse</h4>
+                            <div className="w-full flex flex-col justify-center gap-2 items-center">
+                            <MdOutlineCloudDownload size={40} />
+                            <h4 className="text-textDark font-medium">Drop file here or click to upload</h4>
+                            <h4 className="font-medium text-textDark">Browse</h4>
                             </div>
 
                         </label>
+                    </div>
+
+                    <div>
+                        <button className="text-sm font-medium">Post</button>
                     </div>
                   </div>
                 </DialogDescription>

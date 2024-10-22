@@ -23,7 +23,6 @@ function MyPage() {
         <CreatePost></CreatePost>
       </div>
 
-
       <div className="p-6 mt-6 rounded-xl bg-white border">
         <Title title={'Posts:'}></Title>
 
@@ -35,10 +34,6 @@ function MyPage() {
           <PostCard></PostCard>
           <PostCard></PostCard>
         </div>
-
-
-
-
       </div>
     </div>
   );

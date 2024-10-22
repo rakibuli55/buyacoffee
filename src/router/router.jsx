@@ -16,6 +16,7 @@ import Membership from "@/Pages/dashboardPages/Membership/Membership";
 import MyAccount from "@/Pages/dashboardPages/MyAccount/MyAccount";
 import Payouts from "@/Pages/dashboardPages/Payouts/Payouts";
 import Support from "@/Pages/dashboardPages/Support/Support";
+import CreatorProfilePage from "@/Pages/dashboardPages/Explore/CreatorProfilePage";
 
 
 const router = createBrowserRouter([
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
                 path: '/dashboard/support',
                 element: <Support></Support>
             },
+            {
+                path:'/dashboard/creator/:creatorId',
+                element:<CreatorProfilePage></CreatorProfilePage>
+            }
         ]
     }
 

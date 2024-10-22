@@ -17,7 +17,7 @@ const {role} = useContext(MainContext)
 
   return (
     <div className="w-full p-6">
-      {/* logo */}
+      {/* logoss */}
       <Link to={'/dashboard'} >
         <svg
           xmlns="http://www.w3.org/2000/svg"

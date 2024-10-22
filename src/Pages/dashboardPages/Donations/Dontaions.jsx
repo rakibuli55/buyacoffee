@@ -1,8 +1,13 @@
+import Top from "@/components/dashboard/Top"
 
 
 function Dontaions() {
   return (
-    <div>Dontaions</div>
+    <div>
+       <div className="border-b pb-6">
+        <Top title={"Donation"}></Top>
+      </div>
+    </div>
   )
 }
 

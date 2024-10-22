@@ -4,7 +4,7 @@ function MyPage() {
   return (
     <div className="">
       {/* Home Paget Top */}
-      <div className="border-b  pb-6">
+      <div className="border-b pb-6">
         <Top title={"Profile"}></Top>
       </div>
       <div className=" mt-6 ">

@@ -18,8 +18,10 @@ const {role} = useContext(MainContext)
   return (
     <div className="w-full p-6">
       {/* logoss */}
+      
       <Link to={'/dashboard/home'} >
-       <img src={logo} alt="" />
+       <img src={Logo} alt="" />
+       </Link>
       <div className="pt-6">
         {/* home */}
         <div className="flex items-center flex-col gap-2 w-full ">

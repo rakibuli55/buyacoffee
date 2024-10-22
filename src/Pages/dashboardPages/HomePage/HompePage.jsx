@@ -11,7 +11,7 @@ function HompePage() {
   return (
     <div>
       {/* Home Paget Top */}
-      <div className="border-b  pb-6">
+      <div className="">
         <Top title={'Homepage'}></Top>
       </div>
       <div className="p-6 rounded-xl mt-6 border ">

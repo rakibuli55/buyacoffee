@@ -21,6 +21,7 @@ export default {
         paraDeep: 'rgba(80, 80, 80, 0.70)',
         heroColor: '#afafa',
         primaryLight: '#E4FFCA',
+        backgroundLight: 'rgba(208, 255, 113, 0.10)',
         footerBg: '#081409',
         authInput: '#F3F3F3',
         background: 'hsl(var(--background))',

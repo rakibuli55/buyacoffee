@@ -2,7 +2,7 @@
 
 function Top({title}) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center pb-6 border-b">
         <h3 className="text-textColor font-semibold text-3xl">{title}</h3>
         <div className="flex items-center border rounded-full gap-1 w-fit p-1">
           <div className="w-10 h-10 rounded-full overflow-hidden ">

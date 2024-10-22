@@ -8,6 +8,14 @@ import StepsSignupPage from "../Pages/StepsSignupPage";
 import DashbaordLayout from "../layout/DashbaordLayout";
 import HompePage from "../Pages/dashboardPages/HomePage/HompePage";
 import MyPage from "../Pages/dashboardPages/MyPage/MyPage";
+import Dontaions from "@/Pages/dashboardPages/Donations/Dontaions";
+import Explore from "@/Pages/dashboardPages/Explore/Explore";
+import Followers from "@/Pages/dashboardPages/Followers/Followers";
+import Following from "@/Pages/dashboardPages/Following/Following";
+import Membership from "@/Pages/dashboardPages/Membership/Membership";
+import MyAccount from "@/Pages/dashboardPages/MyAccount/MyAccount";
+import Payouts from "@/Pages/dashboardPages/Payouts/Payouts";
+import Support from "@/Pages/dashboardPages/Support/Support";
 
 
 const router = createBrowserRouter([
@@ -48,7 +56,39 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/my-page',
                 element: <MyPage></MyPage>
-            }
+            },
+            {
+                path: '/dashboard/donations',
+                element: <Dontaions></Dontaions>
+            },
+            {
+                path: '/dashboard/explore',
+                element: <Explore></Explore>
+            },
+            {
+                path: '/dashboard/followers',
+                element: <Followers></Followers>
+            },
+            {
+                path: '/dashboard/following',
+                element: <Following></Following>
+            },
+            {
+                path: '/dashboard/membership',
+                element: <Membership></Membership>
+            },
+            {
+                path: '/dashboard/my-account',
+                element: <MyAccount></MyAccount>
+            },
+            {
+                path: '/dashboard/payouts',
+                element: <Payouts></Payouts>
+            },
+            {
+                path: '/dashboard/support',
+                element: <Support></Support>
+            },
         ]
     }
 

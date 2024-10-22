@@ -1,4 +1,4 @@
-import Top from "./Top";
+import Top from "../../../components/dashboard/Top";
 import {
   Select,
   SelectContent,

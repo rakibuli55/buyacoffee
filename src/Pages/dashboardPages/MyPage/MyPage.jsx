@@ -1,4 +1,4 @@
-import Top from "../HomePage/Top";
+import Top from "../../../components/dashboard/Top";
 
 function MyPage() {
   return (
@@ -44,10 +44,8 @@ function MyPage() {
             </svg>
             <h4>Add cover photo</h4>
           </div>
-
           {/* profile section */}
-
-          <div className="bg-white relative h-fit p-6 w-[96%]  flex justify-center items-center rounded-2xl  absolute -bottom-60">
+          <div className="bg-white relative h-fit p-6 w-[96%]  flex justify-center items-center rounded-2xl  -bottom-60">
             <div className="bg-[#FAFAFA] w-full pl-60 py-12 rounded-2xl  px-7">
               <div className="flex justify-between items-center">
                 <div className="space-y-3">
@@ -82,17 +80,56 @@ function MyPage() {
                     </svg>
                   </div>
                   <div>
-                    <button className="px-12 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm">Edit Profile</button>
+                    <button className="px-12 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm">
+                      Edit Profile
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
             {/* profile image */}
-            <div className="bg-white  absolute -top-12 left-8 w-[200px] h-[220px] p-2 rounded-2xl ">
+            <div className="bg-white absolute -top-12 left-8 w-[200px] h-[220px] p-2 rounded-2xl ">
               <div className=" w-full h-full bg-[#FAFAFA] ">
-                  <img className="object-cover rounded-2xl w-full h-full " src="https://i.ibb.co.com/QXzN6dz/e8c29aa38af9e2661ffb508d79f12a7d.png" alt="" />
+                <img
+                  className="object-cover rounded-2xl w-full h-full "
+                  src="https://i.ibb.co.com/QXzN6dz/e8c29aa38af9e2661ffb508d79f12a7d.png"
+                  alt=""
+                />
               </div>
 
+              <div className="w-8 absolute -right-2 shadow-lg cursor-pointer bottom-8 h-8 rounded-full bg-white flex justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    opacity="0.6"
+                    d="M20.752 9.92532L20.7519 9.92717L20.2319 18.187C20.2319 18.1871 20.2319 18.1871 20.2319 18.1872C20.1761 19.0704 19.919 19.7569 19.491 20.2143C19.0822 20.6512 18.4048 21 17.2399 21H6.75992C5.59461 21 4.91447 20.6509 4.50446 20.2136C4.07605 19.7566 3.81947 19.0715 3.76824 18.1918L3.76795 18.1872L3.24795 9.92717L3.24783 9.92532C3.14537 8.34451 4.40498 7 5.99992 7C6.99356 7 7.89048 6.43276 8.33768 5.57032L8.3417 5.56256L8.34558 5.55474L9.06374 4.10845C9.19327 3.85389 9.46124 3.56594 9.82783 3.33883C10.1957 3.11094 10.5728 3 10.8599 3H13.1499C13.4304 3 13.8047 3.10988 14.1723 3.33822C14.5383 3.56554 14.8065 3.8537 14.9361 4.10843L15.6543 5.55474L15.6581 5.56256L15.6622 5.57032C16.1094 6.43277 17.0063 7 17.9999 7C19.5949 7 20.8545 8.34451 20.752 9.92532Z"
+                    fill="#1F2022"
+                    stroke="#1F2022"
+                    strokeWidth="2"
+                  />
+                  <mask id="path-2-inside-1_9587_1142" fill="white">
+                    <path d="M13.5 8.75H10.5C10.09 8.75 9.75 8.41 9.75 8C9.75 7.59 10.09 7.25 10.5 7.25H13.5C13.91 7.25 14.25 7.59 14.25 8C14.25 8.41 13.91 8.75 13.5 8.75Z" />
+                  </mask>
+                  <path
+                    d="M13.5 8.75H10.5C10.09 8.75 9.75 8.41 9.75 8C9.75 7.59 10.09 7.25 10.5 7.25H13.5C13.91 7.25 14.25 7.59 14.25 8C14.25 8.41 13.91 8.75 13.5 8.75Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M13.5 6.75H10.5V10.75H13.5V6.75ZM10.5 6.75C11.1946 6.75 11.75 7.30543 11.75 8H7.75C7.75 9.51457 8.98543 10.75 10.5 10.75V6.75ZM11.75 8C11.75 8.69457 11.1946 9.25 10.5 9.25V5.25C8.98543 5.25 7.75 6.48543 7.75 8H11.75ZM10.5 9.25H13.5V5.25H10.5V9.25ZM13.5 9.25C12.8054 9.25 12.25 8.69457 12.25 8H16.25C16.25 6.48543 15.0146 5.25 13.5 5.25V9.25ZM12.25 8C12.25 7.30543 12.8054 6.75 13.5 6.75V10.75C15.0146 10.75 16.25 9.51457 16.25 8H12.25Z"
+                    fill="white"
+                    mask="url(#path-2-inside-1_9587_1142)"
+                  />
+                  <path
+                    d="M12.0001 18.13C13.8668 18.13 15.3801 16.6167 15.3801 14.75C15.3801 12.8833 13.8668 11.37 12.0001 11.37C10.1334 11.37 8.62012 12.8833 8.62012 14.75C8.62012 16.6167 10.1334 18.13 12.0001 18.13Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>

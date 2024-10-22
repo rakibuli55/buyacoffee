@@ -18,13 +18,13 @@ const {role} = useContext(MainContext)
   return (
     <div className="w-full p-6">
       {/* logoss */}
-      <Link to={'/dashboard'} >
+      <Link to={'/dashboard/home'} >
        <img src={logo} alt="" />
       </Link>
       <div className="pt-6">
         {/* home */}
         <div className="flex items-center flex-col gap-2 w-full ">
-          <CommonLink path={'/dashboard'} navName={'Home'} Icon={RiHome4Line}></CommonLink>
+          <CommonLink path={'/dashboard/home'} navName={'Home'} Icon={RiHome4Line}></CommonLink>
           <CommonLink path={'/dashboard/my-page'} navName={'View my page'} Icon={PiLayoutThin}></CommonLink>
         </div>
         {/* community */}

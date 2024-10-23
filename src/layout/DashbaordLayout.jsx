@@ -8,10 +8,10 @@ function DashbaordLayout() {
     <MainContextProvider>
       <AosInit>
         <div className="flex w-full ">
-          <div className="w-2/12 border-r h-screen">
+          <div className="w-[320px] fixed border-r h-screen">
             <Sidebar></Sidebar>
           </div>
-          <div className="w-full bg-[#FAFAFA] flex-1 p-6">
+          <div  className="ml-[320px] bg-[#FAFAFA] flex-1 p-6">
             <Outlet></Outlet>
           </div>
         </div>

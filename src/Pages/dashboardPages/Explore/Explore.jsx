@@ -1,6 +1,7 @@
 import CreatorProfile from "@/components/dashboard/Explore/CreatorProfile";
 import Search from "@/components/dashboard/Explore/Search";
 import Top from "@/components/dashboard/Top";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Explore() {
@@ -21,7 +22,7 @@ function Explore() {
     },
     {
       id: 3,
-      name: "Simple Politics",
+      name: "Creative Studio",
       description: "Helping people have better conversations about politics",
       creatorImg: "https://i.ibb.co.com/vvy0NGc/image-106.png",
       creatorNum: "#3",
@@ -35,14 +36,14 @@ function Explore() {
     },
     {
       id: 5,
-      name: "Simple Politics",
+      name: "Artist Ever",
       description: "Helping people have better conversations about politics",
       creatorImg: "https://i.ibb.co.com/ZmXfVhK/image-104.png",
       creatorNum: "#5",
     },
     {
       id: 6,
-      name: "Simple Politics",
+      name: "Jack's Creation",
       description: "Helping people have better conversations about politics",
       creatorImg: "https://i.ibb.co.com/jrTXdFf/image-105.png",
       creatorNum: "#6",
@@ -90,9 +91,16 @@ function Explore() {
       creatorNum: "#12",
     },
   ];
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredSearchData = creatorsData.filter((creator) =>
+    creator.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  );
+
   return (
     <div>
-      <div className="pb-6 border-b">
+      <div>
         <Top title="Explore" />
       </div>
       <div className="w-[1016px] mx-auto mt-8">
@@ -101,17 +109,24 @@ function Explore() {
             A million creators have a home on gift a coffee
           </h3>
           <div>
-            <Search />
+            <Search onSearch={setSearchTerm} searchTerm={searchTerm} />
           </div>
           {/* trending creators  */}
           <div className="mt-6">
             <h3 className="sub-heading mb-3">Trending creators this week</h3>
             <div className="p-12 pt-0 border border-[rgba(rgba(113,113,113,0.12))] rounded-[12px] bg-white grid grid-cols-2">
-              {creatorsData.map((creator) => (
-                <Link to={`/dashboard/creator/${creator.id}`} key={creator.id}>
-                  <CreatorProfile creator={creator} />
-                </Link>
-              ))}
+              {filteredSearchData.length > 0 ? (
+                filteredSearchData.map((creator) => (
+                  <Link
+                    to={`/dashboard/creator/${creator.id}`}
+                    key={creator.id}
+                  >
+                    <CreatorProfile creator={creator} />
+                  </Link>
+                ))
+              ) : (
+                <p>No creators Found</p>
+              )}
             </div>
           </div>
         </div>

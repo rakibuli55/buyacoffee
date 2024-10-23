@@ -27,7 +27,7 @@ function Payouts() {
             <p className="text-base text-paraDark">Instant payout via stripe</p>
           </div>
           <div>
-            <Link to={'/'} className="flex items-center gap-[10px] py-4 px-8 rounded-[60px] bg-primaryColor text-headingColor w-fit mx-auto font-bold mt-9">
+            <Link to={''} className="flex items-center gap-[10px] py-4 px-8 rounded-[60px] bg-primaryColor text-headingColor w-fit mx-auto font-bold mt-9">
               <img src={cardIcon} alt="cardIcon" />
               <p>Connect Stripe</p>
             </Link>

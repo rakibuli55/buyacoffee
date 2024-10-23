@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { IoSearchOutline } from "react-icons/io5";
 
-function Search() {
+function Search({onSearch, searchTerm}) {
   const {
     register,
     handleSubmit,
@@ -9,8 +9,11 @@ function Search() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    onSearch(data.creatorSearch)
   };
+  const handleSearchOnChange = (e) => {
+    onSearch(e.target.value)
+  }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="relative">
@@ -20,7 +23,9 @@ function Search() {
           type="text"
           name="creatorSearch"
           id="creatorSearch"
+          value={searchTerm}
           placeholder="Search creators on gift a coffee"
+          onChange={handleSearchOnChange}
         />
         <button
           type="submit"

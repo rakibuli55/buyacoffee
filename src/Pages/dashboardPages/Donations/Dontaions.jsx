@@ -13,7 +13,7 @@ function Dontaions() {
       </div>
       {/* donation boxs  */}
       <div className="flex flex-wrap mr-[-12px] ml-[-12px]">
-        <div className="donation-box-wrap">
+        <div className="donation-box-wrap ">
           <CommonBoxhShape>
             <h3 className="text-[40px] font-bold text-[#3D464F] mb-6 text-left">
               0

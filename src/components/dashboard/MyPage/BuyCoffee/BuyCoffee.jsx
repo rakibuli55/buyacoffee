@@ -19,7 +19,7 @@ function BuyCoffee() {
 
 
   return (
-    <div className="p-6 rounded-xl flex h-full flex-col justify-between bg-white border space-y-4">
+    <div className="lg:p-6 p-4 rounded-xl flex h-full flex-col justify-between bg-white border space-y-4">
     <Title title={"Buy a Coffee for Zaan:"}></Title>
     <div className="flex gap-4 pt-0 items-center">
       {buyCoffeOptions.map((option, index) => (

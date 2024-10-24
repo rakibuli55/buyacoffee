@@ -9,7 +9,7 @@ function CreatorMessage() {
             alt=""
           />
         </div>
-        <h4 className="font-semibold text-textDark">Thanks. Stay connected.</h4>
+        <h4 className="font-semibold flex-1 lg:text-base text-sm text-textDark">Thanks. Stay connected.</h4>
       </div>
     </div>
   );

@@ -28,8 +28,8 @@ function SharePopup() {
   return (
     <Dialog>
       <DialogTrigger className="w-fit">
-        <div className="flex cursor-pointer items-center bg-btnColor gap-4 px-8 py-3 rounded-full text-white">
-          <h4>Share Page</h4>
+        <div className="flex cursor-pointer items-center bg-btnColor gap-4 lg:px-8 px-4 py-3 rounded-full text-white">
+          <h4 className="hidden lg:flex">Share Page</h4>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -49,7 +49,7 @@ function SharePopup() {
         <DialogHeader>
           <DialogTitle className="p-0 border-b pb-4">
             <div className="relative">
-              <h3 className="text-2xl font-semibold text-textDark text-center ">
+              <h3 className="text-2xl  font-semibold text-textDark text-center ">
                 Share’s page
               </h3>
             </div>
@@ -66,7 +66,7 @@ function SharePopup() {
                 type="text"
                 readOnly
                 name=""
-                className="px-4 py-4 w-full border rounded-full bg-gray-50 "
+                className="px-4 py-4 focus:outline-none w-full border rounded-full bg-gray-50 "
                 id=""
               />
 

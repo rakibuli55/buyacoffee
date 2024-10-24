@@ -114,7 +114,7 @@ function Explore() {
           {/* trending creators  */}
           <div className="mt-6">
             <h3 className="sub-heading mb-3">Trending creators this week</h3>
-            <div className="p-12 pt-0 border border-[rgba(rgba(113,113,113,0.12))] rounded-[12px] bg-white grid grid-cols-2">
+            <div className="p-12 pt-0 border border-[rgba(rgba(113,113,113,0.12))] justify-center items-center rounded-[12px] bg-white grid grid-cols-1 lg:grid-cols-2">
               {filteredSearchData.length > 0 ? (
                 filteredSearchData.map((creator) => (
                   <Link
@@ -125,7 +125,7 @@ function Explore() {
                   </Link>
                 ))
               ) : (
-                <p>No creators Found</p>
+                <p className="col-span-2 text-center ">No creators Found</p>
               )}
             </div>
           </div>

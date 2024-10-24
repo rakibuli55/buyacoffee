@@ -9,7 +9,7 @@ function SupporterMessage() {
           alt=""
         />
       </div>
-      <h4 className="font-semibold text-textDark">Love your podcast! Keep up the good work.
+      <h4 className="font-semibold lg:text-base text-sm text-textDark flex-1">Love your podcast! Keep up the good work.
       </h4>
     </div>
     </div>

@@ -1,39 +1,39 @@
 
-import { useContext, useState } from "react";
+import { useState } from "react";
 import EditProfileForm from "./EditProfile/EditProfileForm";
-import { MainContext } from "@/context";
+
 
 function ProfileSection({isCreator, isMe}) {
 
-  const {role} = useContext(MainContext)
+
   const [follow, setFollow] = useState(false)
 
 
   return (
     <div className=" mt-6 ">
       {/* background Cover */}
-      <div className="relative  flex justify-center px-4 bg-cover bg-[url('https://i.ibb.co.com/16YfRQv/img.jpg')] bg-center w-full h-[350px]">
+      <div className="relative  flex justify-center px-4 bg-cover bg-[url('https://i.ibb.co.com/16YfRQv/img.jpg')] bg-center w-full h-[250px] lg:h-[350px]">
 
         {/* profile section */}
-        <div className="bg-white relative h-fit p-3 w-[96%]  flex justify-center items-center rounded-2xl  -bottom-60">
-          <div className="bg-[#FAFAFA] w-full pl-60 py-12 rounded-2xl  px-7">
-            <div className="flex justify-between items-center">
-              <div className="space-y-3">
-                <h3 className="text-textDark font-semibold text-lg">
+        <div className="bg-white relative h-fit p-1.5 lg:p-3 w-[96%]  flex justify-center items-center rounded-2xl -bottom-40  lg:-bottom-60">
+          <div className="bg-[#FAFAFA] w-full lg:pl-60 py-4 lg:py-12 rounded-2xl px-4  lg:px-7">
+            <div className="lg:flex-row flex-col gap-8 lg:gap-0 flex justify-between items-center">
+              <div className="lg:space-y-3 space-y-1 pl-40">
+                <h3 className="text-textDark font-semibold text-sm lg:text-lg">
                   Lee guitarist
                 </h3>
-                <h4 className="text-base font-medium text-textColor">Artist</h4>
+                <h4 className="lg:text-base font-medium text-textColor text-xs">Artist</h4>
                 <div className="flex items-center gap-2">
-                  <h4 className="text-textColor text-sm  font-medium">
+                  <h4 className="text-textColor lg:text-sm text-xs  font-medium">
                     29.6K Followers
                   </h4>
-                  <li className="text-sm text-textColor font-medium">
+                  <li className="lg:text-sm list-none lg:list-disc text-xs text-textColor font-medium">
                     0 following
                   </li>
                 </div>
               </div>
              {
-              isMe &&   <div className="flex items-center gap-6">
+              isMe && <div className="flex items-center gap-6">
               <div className="bg-white border rounded-full p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ function ProfileSection({isCreator, isMe}) {
             </div>
           </div>
           {/* profile image */}
-          <div className="bg-white absolute -top-12 left-8 w-[200px] h-[220px] p-2 rounded-2xl ">
+          <div className="bg-white absolute -top-12 left-6 lg:left-8 w-[150px] lg:w-[200px] h-[150px] lg:h-[220px] p-1.5 lg:p-2 rounded-2xl ">
             <div className=" w-full h-full bg-[#FAFAFA] ">
               <img
                 className="object-cover rounded-2xl w-full h-full "

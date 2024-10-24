@@ -26,15 +26,15 @@ function CreatePost() {
               alt=""
             />
           </div>
-          <Dialog>
-            <DialogTrigger className="w-full">
+          <Dialog className="rounded-lg">
+            <DialogTrigger asChild className="w-full">
               <div className="w-full">
                 <h4 className="text-[#717171] text-left  px-4 py-3 rounded-full bg-gray-50 w-full font-medium">
                   What’s in your mind?
                 </h4>
               </div>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent className=" rounded-xl ">
               <DialogHeader>
                 <DialogTitle className="p-0 border-b pb-4">
                   <div className="relative">
@@ -102,7 +102,7 @@ function CreatePost() {
           </Dialog>
         </div>
         <Dialog>
-          <DialogTrigger className="w-full">
+          <DialogTrigger asChild className="w-full">
             <div className="flex justify-around lg:justify-between">
               <div className="bg-[#E9E9E9] px-4 cursor-pointer items-center ap-4 flex py-2 rounded-full">
                 <svg

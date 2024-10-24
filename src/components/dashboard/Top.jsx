@@ -23,6 +23,13 @@ function Top({ title }) {
   const [toggleMenu, setToggleMenu] = useState(false)
   const {role} = useContext(MainContext)
 
+  if(toggleMenu) {
+    document.body.classList.add('overflow-hidden')
+  }else{
+    document.body.classList.remove('overflow-hidden')
+  }
+
+
 
   return (
     <div className="flex justify-between z-50 relative items-center pb-4 lg:pb-6 border-b">
@@ -67,11 +74,11 @@ function Top({ title }) {
           />
         </svg>
       </div>
-      <div onClick={() => setToggleMenu(false)} className={`${toggleMenu? "opacity-100 visible rotate-45": 'opacity-0 invisible hidden'}`}>
+      <div onClick={() => setToggleMenu(false)} className={`${toggleMenu ? "opacity-100 visible rotate-45": 'opacity-0 invisible hidden'}`}>
       <HiOutlinePlus size={30} />
       </div>
-      <div className={`w-full ${toggleMenu ? '' : '-translate-x-[150%] transition-all duration-300 -z-10 opacity-0'} absolute transition-all duration-300 px-8 py-4 -z-10 top-20 left-0 bg-white shadow-lg rounded-lg`}>
-      <div className="w-full md:w-[500px] p-6">
+      <div className={`w-full ${toggleMenu ? '' : '-translate-x-[150%] transition-all duration-300 -z-10 opacity-0'} absolute transition-all duration-300 px-8 py-4 -z-10 top-[78px] left-0 bg-white rounded-lg`}>
+      <div className="w-full h-[86vh] md:w-[500px] p-6">
       <div className="pt-0">
         {/* home */}
         <div className="flex items-center flex-col gap-2 w-full ">

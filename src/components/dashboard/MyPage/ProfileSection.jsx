@@ -33,7 +33,7 @@ function ProfileSection({isCreator, isMe}) {
                 </div>
               </div>
              {
-              isMe && <div className="flex items-center gap-6">
+              isMe && <div className="flex justify-center items-center gap-6">
               <div className="bg-white border rounded-full p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

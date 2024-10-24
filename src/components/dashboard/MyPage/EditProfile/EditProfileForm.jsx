@@ -78,11 +78,11 @@ function EditProfileForm() {
   return (
     <Dialog className="">
       <DialogTrigger className="w-full">
-        <button className="px-12 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm">
+        <button className="lg:px-12 px-14 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm lg:text-sm">
           Edit Profile
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-5xl h-full p-2 scrollbar-hide overflow-y-scroll">
+      <DialogContent className="lg:max-w-5xl max-w-lg h-full p-2 scrollbar-hide overflow-y-scroll">
         <DialogHeader>
           <DialogTitle className="p-0 ">
             <div className="relative pt-4">
@@ -106,7 +106,7 @@ function EditProfileForm() {
                   onChange={handleCover}
                 />
                 <label className="w-full " htmlFor="coverPhoto">
-                  <div className="w-full relative h-[300px]">
+                  <div className="w-full relative h-[200px] lg:h-[300px]">
                     <img
                       className="w-full  h-full object-cover"
                       src={coverUrl}
@@ -144,7 +144,7 @@ function EditProfileForm() {
                           fill="white"
                         />
                       </svg>
-                      <h4 className="text-sm font-medium ">Edit Cover Photo</h4>
+                      <h4 className="lg:text-sm text-xs font-medium ">Edit Cover Photo</h4>
                     </div>
                   </div>
                 </label>
@@ -159,7 +159,7 @@ function EditProfileForm() {
                   onChange={handleProfile}
                 />
                 <label htmlFor="profilePhoto">
-                  <div className=" rounded-full cursor-pointer group relative overflow-hidden size-28">
+                  <div className=" rounded-full cursor-pointer group relative overflow-hidden size-20 lg:size-28">
                     <img
                       className="w-full h-full object-cover rounded-full"
                       src={profileUrl}
@@ -202,7 +202,7 @@ function EditProfileForm() {
                 </label>
               </div>
             </div>
-            <div className="space-y-3 px-60 pt-8">
+            <div className="space-y-3 px-8 lg:px-60 pt-8">
               {/* full name */}
               <div className="flex flex-col gap-2.5">
                 <label

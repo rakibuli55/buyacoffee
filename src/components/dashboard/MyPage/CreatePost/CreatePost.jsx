@@ -16,7 +16,7 @@ import CreatorMessage from "./CreatorMessage";
 function CreatePost() {
   return (
     <div className=" rounded-xl flex-col flex gap-4 space-y-3">
-      <div className="bg-white p-6 rounded-xl border space-y-3">
+      <div className="bg-white lg:p-6 p-4 rounded-xl border space-y-3">
         <Title title={"Post an update:"}></Title>
         <div className="flex items-center gap-4 border-b pb-4">
           <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -103,8 +103,8 @@ function CreatePost() {
         </div>
         <Dialog>
           <DialogTrigger className="w-full">
-            <div className="flex justify-between">
-              <div className="bg-[#E9E9E9] px-4 cursor-pointer items-center gap-4 flex py-2 rounded-full">
+            <div className="flex justify-around lg:justify-between">
+              <div className="bg-[#E9E9E9] px-4 cursor-pointer items-center ap-4 flex py-2 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -123,7 +123,7 @@ function CreatePost() {
                     stroke="white"
                   />
                 </svg>
-                <h4>Video</h4>
+                <h4 className="lg:flex hidden">Video</h4>
               </div>
               <div className="bg-[#E9E9E9] px-4 cursor-pointer items-center gap-4 flex py-2 rounded-full">
                 <svg
@@ -151,7 +151,7 @@ function CreatePost() {
                     strokeWidth="2"
                   />
                 </svg>
-                <h4>Photos</h4>
+                <h4 className="lg:flex hidden">Photos</h4>
               </div>
               <div className="bg-[#E9E9E9] px-4 cursor-pointer items-center gap-4 flex py-2 rounded-full">
                 <svg
@@ -192,7 +192,7 @@ function CreatePost() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <h4>Audio</h4>
+                <h4 className="lg:flex hidden">Audio</h4>
               </div>
             </div>
           </DialogTrigger>
@@ -263,7 +263,7 @@ function CreatePost() {
           </DialogContent>
         </Dialog>
       </div>
-      <div className="border rounded-xl bg-white p-4">
+      <div className="border rounded-xl bg-white lg:p-6 p-4">
         <Title title={"Recent Supporters:"}></Title>
         <div>
           <div className="flex items-center pb-2  gap-4 ">
@@ -332,7 +332,7 @@ function CreatePost() {
           </div>
         </div>
 
-        <div className="w-full space-y-3 h-[200px] overflow-y-scroll scrollbar-hide p-2 rounded-lg">
+        <div className="w-full space-y-3 h-[250px] lg:h-[200px] overflow-y-scroll scrollbar-hide p-2 rounded-lg">
           <SupporterMessage></SupporterMessage>
           <CreatorMessage></CreatorMessage>
           <SupporterMessage></SupporterMessage>

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 function Payouts() {
   return (
     <div>
-      <div className="border-b pb-6">
+      <div>
         <Top title="Payouts" />
       </div>
       <div>

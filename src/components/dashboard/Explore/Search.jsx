@@ -19,7 +19,7 @@ function Search({onSearch, searchTerm}) {
       <div className="relative">
         <input
           {...register("creatorSearch")}
-          className="py-5 pl-[60px] pr-3 border border-[rgba(113,113,113,0.12)] rounded-[100px] text-base text-headingColor w-full focus:outline-none"
+          className="lg:py-5 py-3 pl-[60px] pr-3 text-sm border border-[rgba(113,113,113,0.12)] rounded-[100px] lg:text-base text-headingColor w-full focus:outline-none"
           type="text"
           name="creatorSearch"
           id="creatorSearch"
@@ -29,7 +29,7 @@ function Search({onSearch, searchTerm}) {
         />
         <button
           type="submit"
-          className="absolute py-[10px] px-4 rounded-[100px] bg-primaryColor font-bold text-headingColor top-1/2 translate-y-[-50%] right-3"
+          className="absolute py-[8px] text-sm lg:text-base lg:py-[10px] px-4 rounded-[100px] bg-primaryColor font-bold text-headingColor top-1/2 translate-y-[-50%] right-3"
         >
           Search
         </button>

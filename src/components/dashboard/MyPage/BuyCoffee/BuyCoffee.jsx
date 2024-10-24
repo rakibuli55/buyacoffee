@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Title from "./Title"
+import Title from "../Title"
 
 
 function BuyCoffee() {
 
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [buyType, setBuyType] = useState("");
+    const [activeIndex, setActiveIndex] = useState(1);
+    const [buyType, setBuyType] = useState("monthly");
     const[count, setCount] = useState(10)
   
     const handleBuyCoffee = (index, value) => {
@@ -15,9 +15,11 @@ function BuyCoffee() {
   
     const buyCoffeOptions = ["one-off", "monthly"];
 
+    console.log(buyType);
+
 
   return (
-    <div className="p-6 rounded-xl flex flex-col justify-between bg-white border space-y-4">
+    <div className="lg:p-6 p-4 rounded-xl flex h-full flex-col justify-between bg-white border space-y-4">
     <Title title={"Buy a Coffee for Zaan:"}></Title>
     <div className="flex gap-4 pt-0 items-center">
       {buyCoffeOptions.map((option, index) => (
@@ -28,13 +30,15 @@ function BuyCoffee() {
               activeIndex === index
                 ? "border-borderColor bg-primaryLight"
                 : ""
-            } capitalize  w-full py-3 text-sm font-bold border rounded-full`}
+            } capitalize w-full py-3 text-sm font-bold border rounded-full`}
           >
             {option}
           </button>
         </div>
       ))}
     </div>
+
+    
     <div className="flex justify-between items-center ">
       <div className="flex  items-center gap-2">
         <svg
@@ -102,7 +106,8 @@ function BuyCoffee() {
       </div>
 
       <div className="flex items-center gap-1">
-        <div onClick={() => setCount( (prevState) => prevState + 10) } className="border cursor-pointer p-2 rounded-full">
+        {
+          buyType === 'one-off' &&  <div onClick={() => setCount( (prevState) => prevState + 10) } className="border cursor-pointer p-2 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -126,10 +131,14 @@ function BuyCoffee() {
             />
           </svg>
         </div>
+        }
+       
         <h4 className="w-10 h-10 flex justify-center font-medium text-textDark items-center rounded-full border">
-          {count}
+          { buyType === 'one-off' && count}
+          { buyType === 'monthly' && 10}
         </h4>
-        <div onClick={() => setCount( (prevState) =>  count > 10 ? prevState - 10 : prevState) } className="border cursor-pointer p-2 rounded-full">
+        {
+         buyType === 'one-off' && <div onClick={() => setCount( (prevState) =>  count > 10 ? prevState - 10 : prevState) } className={` border cursor-pointer p-2 rounded-full`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -143,6 +152,7 @@ function BuyCoffee() {
             />
           </svg>
         </div>
+        }
       </div>
     </div>
     <div className="">
@@ -161,7 +171,7 @@ function BuyCoffee() {
       <textarea className="text-textColor focus:outline-none bg-gray-50 px-4 py-3 h-[220px] resize-none border rounded-xl w-full" name="" placeholder="Your work is amazing!!" id=""></textarea>
     </div>
     <div className="">
-        <button className="w-full  rounded-full bg-primaryColor text-textDark font-bold  py-4">
+        <button className="w-full text-sm md:text-base  rounded-full bg-primaryColor text-textDark font-bold py-3 md:py-4">
         Support  Now
         </button>
       </div>

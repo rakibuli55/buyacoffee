@@ -103,9 +103,9 @@ function Explore() {
       <div>
         <Top title="Explore" />
       </div>
-      <div className="w-[1016px] mx-auto mt-8">
+      <div className="lg:w-[1016px] w-full mx-auto mt-8">
         <div>
-          <h3 className="sub-heading mb-3">
+          <h3 className="lg:sub-heading mb-3 font-semibold  text-base ">
             A million creators have a home on gift a coffee
           </h3>
           <div>
@@ -113,19 +113,19 @@ function Explore() {
           </div>
           {/* trending creators  */}
           <div className="mt-6">
-            <h3 className="sub-heading mb-3">Trending creators this week</h3>
-            <div className="p-12 pt-0 border border-[rgba(rgba(113,113,113,0.12))] rounded-[12px] bg-white grid grid-cols-2">
+            <h3 className="lg:sub-heading text-base font-semibold mb-3">Trending creators this week</h3>
+            <div className="lg:p-12 p-8 pt-0 border border-[rgba(rgba(113,113,113,0.12))] justify-center items-center rounded-[12px] bg-white grid grid-cols-1 lg:grid-cols-2">
               {filteredSearchData.length > 0 ? (
                 filteredSearchData.map((creator) => (
                   <Link
-                    to={`/dashboard/creator/${creator.id}`}
+                    to={`/dashboard/explore/creator/${creator.id}`}
                     key={creator.id}
                   >
                     <CreatorProfile creator={creator} />
                   </Link>
                 ))
               ) : (
-                <p>No creators Found</p>
+                <p className="col-span-2 text-center ">No creators Found</p>
               )}
             </div>
           </div>

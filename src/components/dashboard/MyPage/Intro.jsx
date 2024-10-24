@@ -12,7 +12,7 @@ import {
 
 function Intro() {
   return (
-    <div className="p-6 rounded-xl flex flex-col justify-between bg-white border">
+    <div className="lg:p-6 p-4 rounded-xl h-full flex flex-col justify-between bg-white border">
       <Title title={"Intro:"}></Title>
       <p className="text-textColor font-medium">
         Hey this is my page for anyone who appreciates my music videos. 😀 I am
@@ -31,7 +31,7 @@ function Intro() {
         </div>
         <div className="pt-4">
           <Dialog>
-            <DialogTrigger className="w-full">
+            <DialogTrigger asChild className="w-full">
             <button className="w-full rounded-full bg-primaryColor text-textDark font-bold  py-4">
                 Edit  Feathered
               </button>
@@ -46,7 +46,10 @@ function Intro() {
                   </div>
                 </DialogTitle>
                 <DialogDescription>
-                  <div className="py-4">
+                 
+                </DialogDescription>
+              </DialogHeader>
+              <div className="py-4">
                     <div className="flex gap-4 items-center">
                       <div className="w-10 h-10 rounded-full overflow-hidden">
                         <img
@@ -98,8 +101,6 @@ function Intro() {
                       </button>
                     </div>
                   </div>
-                </DialogDescription>
-              </DialogHeader>
             </DialogContent>
           </Dialog>
         </div>

@@ -13,16 +13,16 @@ function Footer() {
     return null;
   }
   return (
-    <footer className="bg-fotterBg text-white py-[60px]">
+    <footer className="bg-footerBg text-white py-[60px]">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between">
           <div>
             <Link to={"/"}>
               <img src={Logo} alt="Logo" />
             </Link>
           </div>
           <div>
-            <ul className="footer-menu flex items-center gap-6">
+            <ul className="footer-menu flex flex-wrap md:flex justify-center md:justify-start items-center gap-6 mt-6 mb-[30px] md:mb-0 md:mt-0">
               <li>
                 <NavLink to={"/"}>Help & Support</NavLink>
               </li>

@@ -80,10 +80,13 @@
     transform: scale(0.9);
   }
   .auth-header {
-    @apply text-[48px] font-semibold leading-[64px] mb-8 text-headingColor text-center;
+    @apply text-[24px] lg:text-[48px] font-semibold lg:leading-[64px] mb-8 text-headingColor text-center;
   }
   .auth-box {
-    @apply w-[536px];
+    @apply lg:w-[536px];
+  }
+  .auth-input{
+    @apply py-3 px-6 rounded-[8px] bg-authInput border text-sm md:text-[18px] font-medium text-headingColor w-full placeholder:text-headingColor focus:outline-none
   }
   .custom-radio[type="radio"]:checked,
   .custom-radio[type="radio"]:not(:checked) {
@@ -135,11 +138,36 @@
     transform: scale(1);
   }
   .donation-box-wrap {
-    @apply w-[33.33%] flex-[1_0_33.33%] px-3;
+    @apply w-full lg:w-[33.33%] lg:flex-[1_0_33.33%] px-3;
   }
   .sub-heading {
-    @apply text-[24px] font-bold text-headingColor
+    @apply text-[24px] font-bold text-headingColor;
   }
+  .input-control {
+    @apply py-3 px-5 md:p-4 md:px-5 rounded-[8px] text-base text-headingColor border bg-[#F0F0F0] w-full focus:outline-none;
+  }
+  .input-label {
+    @apply inline-block text-base font-semibold text-[#414651] mb-3 text-sm md:text-base;
+  }
+  .common-select {
+    @apply !bg-[#F0F0F0] !h-14 !px-5;
+  }
+  .primary-button {
+    @apply !text-sm md:!text-[18px];
+  }
+  
+}
+
+/* Add this to your global CSS file */
+.scrollbar-hide {
+  /* For Firefox */
+  scrollbar-width: none;
+
+  /* For Chrome, Safari, and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 @layer base {

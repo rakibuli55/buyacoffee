@@ -7,9 +7,9 @@ import SslLogin from "../components/sslcomponent/SslLogin";
 import FacebookIcon from "../assets/images/Facebook-ssl.svg";
 import GoogleIcon from "../assets/images/google-ssl.svg";
 import { UsernameContext } from "../context";
+import Logo from "../assets/images/logo.svg";
 
 function SignUpPage() {
-
   const navigate = useNavigate();
 
   const {
@@ -22,51 +22,67 @@ function SignUpPage() {
   const onSubmit = (data) => {
     console.log(data);
     reset();
-    navigate('/signupsteps')
+    navigate("/signupsteps");
   };
 
-  const {username} = useContext(UsernameContext)
+  const { username } = useContext(UsernameContext);
 
   return (
     <section>
       <div className="flex items-start">
-        <AuthLeft />
-        <div className="auth-right w-[60%] min-h-screen max-h-screen pt-[60px] pr-[32px] pl-[136px] pb-[100px] overflow-y-auto">
+        <div className="w-[40%] hidden lg:block">
+          <AuthLeft />
+        </div>
+        <div className="auth-right lg:w-[60%] min-h-screen max-h-screen pt-5 lg:pt-[60px] pr-5 lg:pr-[32px] pl-5 lg:pl-[136px] pb-[100px] overflow-y-auto">
           <div className="text-right">
-            <p className="text-[18px]">
-            Already have an account?
-              <Link
-                to={"/login"}
-                className="duration-200 ease-in-out hover:text-primaryColor"
-              >
-                Sign in
-              </Link>
-            </p>
+            <div className="flex items-center justify-between lg:justify-end">
+              <img className="lg:hidden" src={Logo} alt="" />
+              <p className="text-base lg:text-[18px]">
+                <span className="hidden lg:inline">Don't have an account?</span>
+                <Link
+                  to={"/login"}
+                  className="duration-200 ease-in-out hover:text-primaryColor underline lg:no-underline"
+                >
+                  Sign in
+                </Link>
+              </p>
+            </div>
           </div>
           <div className="auth-box mt-14 relative">
-            <h1 className="auth-header">Welcome {username || "Guest"}</h1>     
+            <h1 className="auth-header">Welcome {username || "Guest"}</h1>
             <div>
-              <div className="mt-14">
+              <div className="lg:mt-14">
                 <SslLogin>
-                  <img src={FacebookIcon} alt="" />
+                  <img
+                    className="w-5 h-5 md:w-8 md:h-8"
+                    src={FacebookIcon}
+                    alt=""
+                  />
                   Continue with Google
                 </SslLogin>
               </div>
               <div className="mt-6">
                 <SslLogin>
-                  <img src={GoogleIcon} alt="" />
+                  <img
+                    className="w-5 h-5 md:w-8 md:h-8"
+                    src={GoogleIcon}
+                    alt=""
+                  />
                   Continue with Facebook
                 </SslLogin>
               </div>
             </div>
             {/* divider  */}
-            <div className="mt-14 relative">
+            <div className="mt-9 lg:mt-14 relative">
               <span className="block w-full h-[1px] bg-[rgba(0,0,0,0.12)]"></span>
               <span className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-white p-1 text-base text-paraDark">
                 or signup with
               </span>
             </div>
-            <form className="mt-[56px]" onSubmit={handleSubmit(onSubmit)}>
+            <form
+              className="mt-10 lg:mt-[56px]"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               {/* email  */}
               <div className="mt-4">
                 <input
@@ -75,7 +91,7 @@ function SignUpPage() {
                   name="email"
                   id="email"
                   placeholder="Email"
-                  className={`py-3 px-6 rounded-[8px] bg-authInput border text-[18px] font-medium text-headingColor w-full placeholder:text-headingColor focus:outline-none ${
+                  className={`auth-input ${
                     errors.email ? "border-red-300" : ""
                   }`}
                 />
@@ -99,7 +115,7 @@ function SignUpPage() {
                   name="password"
                   id="password"
                   placeholder="Password"
-                  className={`py-3 px-6 rounded-[8px] bg-authInput border text-[18px] font-medium text-headingColor w-full placeholder:text-headingColor focus:outline-none ${
+                  className={`auth-input ${
                     errors.password ? "border-red-300" : ""
                   }`}
                 />
@@ -109,19 +125,28 @@ function SignUpPage() {
                   </p>
                 )}
               </div>
-              <div>
-                <input 
-                {...register("terms", {required: 'You must accept the terms and conditions'})}
-                type="checkbox"
-                id="terms"
-                name="terms"
-                 />
-                 <label htmlFor="terms" className="ml-2 mt-3 inline-block">By continuing, you agree to the terms of service and privacy policy.
-                 </label>
-                 {errors.terms && (
-                <p className="text-red-500 text-sm mt-1">{errors.terms.message}</p>
-              )}
+              <div className="flex md:block items-center">
+                <input
+                  {...register("terms", {
+                    required: "You must accept the terms and conditions",
+                  })}
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                />
+                <label
+                  htmlFor="terms"
+                  className="text-sm ml-2 mt-3 inline-block"
+                >
+                  By continuing, you agree to the terms of service and privacy
+                  policy.
+                </label>
               </div>
+              {errors.terms && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.terms.message}
+                </p>
+              )}
               {/* submit btn  */}
               <button type="submit" className="text-center w-full mt-8">
                 <ButtonPrimary text="Sign up" />

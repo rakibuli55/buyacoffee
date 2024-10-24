@@ -91,7 +91,7 @@ const router = createBrowserRouter([
                 element: <Support></Support>
             },
             {
-                path:'/dashboard/creator/:creatorId',
+                path:'/dashboard/explore/creator/:creatorId',
                 element:<CreatorProfilePage></CreatorProfilePage>
             }
         ]

@@ -12,7 +12,7 @@ import {
 
 function Intro() {
   return (
-    <div className="p-6 rounded-xl flex flex-col justify-between bg-white border">
+    <div className="p-6 rounded-xl h-full flex flex-col justify-between bg-white border">
       <Title title={"Intro:"}></Title>
       <p className="text-textColor font-medium">
         Hey this is my page for anyone who appreciates my music videos. 😀 I am
@@ -31,7 +31,7 @@ function Intro() {
         </div>
         <div className="pt-4">
           <Dialog>
-            <DialogTrigger className="w-full">
+            <DialogTrigger asChild className="w-full">
             <button className="w-full rounded-full bg-primaryColor text-textDark font-bold  py-4">
                 Edit  Feathered
               </button>

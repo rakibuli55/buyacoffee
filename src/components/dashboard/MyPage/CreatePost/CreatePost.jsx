@@ -196,7 +196,7 @@ function CreatePost() {
               </div>
             </div>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="">
             <DialogHeader>
               <DialogTitle className="p-0 border-b pb-4">
                 <div className="relative">

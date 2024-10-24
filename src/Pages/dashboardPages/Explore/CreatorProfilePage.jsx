@@ -1,11 +1,18 @@
+import Intro from '@/components/dashboard/MyPage/Intro'
+import ProfileSection from '@/components/dashboard/MyPage/ProfileSection'
 import Top from '@/components/dashboard/Top'
-import React from 'react'
 
 function CreatorProfilePage() {
   return (
     <div>
         <div>
-            <Top title="Profile" />
+            <Top title="Creator Profile" />
+        </div>
+        <div>
+          <ProfileSection />
+          <div>
+            <Intro />
+          </div>
         </div>
     </div>
   )

@@ -68,16 +68,14 @@ function EditProfileForm() {
   const handleCheckedChange = (checked) => {
     setPermission(checked)
   }
-
+  
   // error
   console.log(errors);
 
 
-
-
   return (
     <Dialog className="">
-      <DialogTrigger className="w-full">
+      <DialogTrigger asChild className="w-full">
         <button className="lg:px-12 px-14 py-3 bg-primaryColor rounded-full text-textDark font-bold text-sm lg:text-sm">
           Edit Profile
         </button>

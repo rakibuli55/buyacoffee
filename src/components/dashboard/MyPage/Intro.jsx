@@ -46,7 +46,10 @@ function Intro() {
                   </div>
                 </DialogTitle>
                 <DialogDescription>
-                  <div className="py-4">
+                 
+                </DialogDescription>
+              </DialogHeader>
+              <div className="py-4">
                     <div className="flex gap-4 items-center">
                       <div className="w-10 h-10 rounded-full overflow-hidden">
                         <img
@@ -98,8 +101,6 @@ function Intro() {
                       </button>
                     </div>
                   </div>
-                </DialogDescription>
-              </DialogHeader>
             </DialogContent>
           </Dialog>
         </div>

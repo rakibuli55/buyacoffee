@@ -9,7 +9,7 @@ import ratingStar from "../../assets/images/rating.png";
 
 function AuthLeft() {
   return (
-    <div className="bg-primaryLight min-h-screen rounded-tr-[20px] rounded-br-[20px] w-[40%] pt-8 pl-[30px] pb-[66px]">
+    <div className="bg-primaryLight min-h-screen rounded-tr-[20px] rounded-br-[20px] pt-8 pl-[30px] pb-[66px]">
         <div className="pl-[35px]">
             <img src={Logo} alt="logo" />
             <p className="text-[18px] font-medium mt-2 text-headingColor">Welcome to giftacoffee</p>

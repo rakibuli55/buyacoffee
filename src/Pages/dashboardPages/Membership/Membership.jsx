@@ -2,7 +2,7 @@ import Top from "@/components/dashboard/Top";
 import warningBlackImg from "../../../assets/images/warning-black.png";
 import ButtonPrimary from "@/components/buttons/ButtonPrimary";
 import MembershipBox from "@/components/dashboard/Membership/MembershipBox";
-import BuyCoffee from "@/components/dashboard/MyPage/BuyCoffee";
+import BuyCoffee from "@/components/dashboard/MyPage/BuyCoffee/BuyCoffee";
 
 function Membership() {
   return (

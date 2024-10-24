@@ -29,7 +29,7 @@ function Top({ title }) {
       <h3 className="text-textColor font-semibold lg:flex hidden text-3xl">
         {title}
       </h3>
-      <Link to={'/dashboard/home'} className="">
+      <Link to={'/dashboard/home'} className="lg:hidden flex">
         <img src={Logo} alt="" />
       </Link>
       <div onClick={() => setToggleMenu(true)} className={`flex lg:hidden ${toggleMenu ? "opacity-0 invisible hidden" : 'opacity-100 visible'}  items-center border rounded-full gap-1 w-fit p-1`}>

@@ -12,8 +12,8 @@ function DashbaordLayout() {
           <div className="w-[320px] lg:block hidden fixed border-r h-screen">
             <Sidebar></Sidebar>
           </div>
-          <div className="flex flex-col lg:ml-[320px] m-0 lg:w-full">
-          <div  className="  bg-[#FAFAFA] flex-1 min-h-screen p-4 lg:p-6">
+          <div className="flex flex-col lg:ml-[320px] m-0 w-full lg:w-full">
+          <div  className="bg-[#FAFAFA] flex-1 min-h-screen p-4 lg:p-6">
             <Outlet></Outlet>
           </div>
           <div className=" p-4 lg:p-6 ">

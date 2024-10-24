@@ -10,7 +10,7 @@ import {
 
 function HompePage() {
   return (
-    <div>
+    <div className="">
       {/* Home Paget Top */}
       <div className="">
         <Top title={'Homepage'}></Top>

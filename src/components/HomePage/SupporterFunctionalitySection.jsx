@@ -32,11 +32,11 @@ function SupporterFunctionalitySection() {
     },
   ];
   return (
-    <section className="pt-[120px] pb-[67px]">
+    <section className="pt-[60px] lg:pt-[120px] pb-[67px]">
       <div className="conainer">
         <div>
           <h3
-            className="text-[48px] mb-14 font-semibold leading-[64px] w-[1094px] mx-auto text-headingColor text-center"
+            className="text-[24px] leading-[32px] lg:text-[48px] mb-14 font-semibold lg:leading-[64px] lg:w-[1094px] mx-auto text-headingColor text-center"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -56,7 +56,7 @@ function SupporterFunctionalitySection() {
               </div>
             ))}
           </div>
-          <div className="w-fit mx-auto mt-[60px] mb-[68px]">
+          <div className="w-fit mx-auto mt-10 lg:mt-[60px] lg:mb-[68px]">
             <div data-aos="fade-up">
               <Link to={"/createaccount"}>
                 <ButtonPrimary text="Start my page — It’s free" />

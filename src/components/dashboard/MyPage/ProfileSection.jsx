@@ -17,8 +17,8 @@ function ProfileSection({isCreator, isMe}) {
         {/* profile section */}
         <div className="bg-white relative h-fit p-1.5 lg:p-3 w-[96%]  flex justify-center items-center rounded-2xl -bottom-40  lg:-bottom-60">
           <div className="bg-[#FAFAFA] w-full lg:pl-60 py-4 lg:py-12 rounded-2xl px-4  lg:px-7">
-            <div className="lg:flex-row flex-col gap-8 lg:gap-0 flex justify-between items-center">
-              <div className="lg:space-y-3 space-y-1 pl-40">
+            <div className="lg:flex-row flex-col gap-8 lg:gap-0 flex justify-between ">
+              <div className="lg:space-y-3 space-y-1 pl-40 lg:pl-0">
                 <h3 className="text-textDark font-semibold text-sm lg:text-lg">
                   Lee guitarist
                 </h3>

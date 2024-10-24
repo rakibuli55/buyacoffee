@@ -5,7 +5,7 @@ import { IoHeart } from "react-icons/io5";
 function Following() {
   return (
     <div>
-      <div className="border-b pb-6">
+      <div>
         <Top title="Following" />
       </div>
       <div>

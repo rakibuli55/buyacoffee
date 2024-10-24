@@ -13,7 +13,7 @@ function MyAccount() {
       <div>
         <Top title="My Account" />
       </div>
-      <div className="w-[1016px] mx-auto">
+      <div className="lg:w-[1016px] mx-auto">
         <CommonBoxhShape>
           <div>
             <h3 className="text-center text-[18px] font-semibold mb-4 text-headingColor">

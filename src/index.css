@@ -140,6 +140,15 @@
   .sub-heading {
     @apply text-[24px] font-bold text-headingColor
   }
+  .input-control{
+    @apply p-4 px-5 rounded-[8px] text-base text-headingColor border bg-[#F0F0F0] w-full focus:outline-none
+  }
+  .input-label{
+    @apply inline-block text-base font-semibold text-[#414651] mb-3
+  }
+  .common-select{
+    @apply !bg-[#F0F0F0] !h-14 !px-5
+  }
 }
 
 @layer base {

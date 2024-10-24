@@ -22,7 +22,7 @@ function StepSection() {
         
     ]
   return (
-    <section className='pt-5 pb-[100px] bg-primaryLight mt-[-50px]'>
+    <section className='pt-5 pb-[60px] lg:pb-[100px] bg-primaryLight lg:mt-[-50px]'>
         <div className='container'>
             <div>
                 {

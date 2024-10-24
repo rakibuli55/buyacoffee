@@ -25,12 +25,12 @@ function Top({ title }) {
 
 
   return (
-    <div className="flex justify-between z-50 relative items-center pb-6 border-b">
+    <div className="flex justify-between z-50 relative items-center pb-4 lg:pb-6 border-b">
       <h3 className="text-textColor font-semibold lg:flex hidden text-3xl">
         {title}
       </h3>
       <Link to={'/dashboard/home'} className="lg:hidden flex">
-        <img src={Logo} alt="" />
+        <img className="w-16 h-16" src={Logo} alt="" />
       </Link>
       <div onClick={() => setToggleMenu(true)} className={`flex lg:hidden ${toggleMenu ? "opacity-0 invisible hidden" : 'opacity-100 visible'}  items-center border rounded-full gap-1 w-fit p-1`}>
         <div className="w-10 h-10 rounded-full overflow-hidden ">

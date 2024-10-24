@@ -45,7 +45,7 @@ function SharePopup() {
         </div>
         <Toaster />
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className='h-fit '>
         <DialogHeader>
           <DialogTitle className="p-0 border-b pb-4">
             <div className="relative">

@@ -11,9 +11,9 @@ import { DialogClose } from "@radix-ui/react-dialog";
 
 function DeleteAccount() {
   return (
-    <div className="flex items-center justify-between p-[30px] bg-[#FAFAFA] rounded-[12px]">
-      <div className="w-[562px]">
-        <h4 className="text-[20px] font-semibold mb-6">Delete account</h4>
+    <div className="lg:flex items-center justify-between p-6 lg:p-[30px] bg-[#FAFAFA] rounded-[12px]">
+      <div className="lg:w-[562px]">
+        <h4 className="text-[20px] font-semibold mb-5 lg:mb-6">Delete account</h4>
         <p className="text-[18px] font-medium text-paraDark">
           Your account and your personal data will be permanently deleted. This
           action is irreversible.
@@ -22,7 +22,7 @@ function DeleteAccount() {
 
       <Dialog>
         <DialogTrigger>
-          <button className="text-base py-3 px-6 rounded-[70px] bg-[#FF5630] text-white font-bold">
+          <button className="text-base py-3 px-6 mt-8 lg:mt-0 rounded-[70px] bg-[#FF5630] text-white font-bold">
             Delete
           </button>
         </DialogTrigger>

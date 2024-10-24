@@ -30,7 +30,7 @@ function BuyCoffee() {
               activeIndex === index
                 ? "border-borderColor bg-primaryLight"
                 : ""
-            } capitalize  w-full py-3 text-sm font-bold border rounded-full`}
+            } capitalize w-full py-3 text-sm font-bold border rounded-full`}
           >
             {option}
           </button>
@@ -171,7 +171,7 @@ function BuyCoffee() {
       <textarea className="text-textColor focus:outline-none bg-gray-50 px-4 py-3 h-[220px] resize-none border rounded-xl w-full" name="" placeholder="Your work is amazing!!" id=""></textarea>
     </div>
     <div className="">
-        <button className="w-full  rounded-full bg-primaryColor text-textDark font-bold  py-4">
+        <button className="w-full text-sm md:text-base  rounded-full bg-primaryColor text-textDark font-bold py-3 md:py-4">
         Support  Now
         </button>
       </div>
